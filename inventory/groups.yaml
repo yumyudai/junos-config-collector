@@ -1,0 +1,8 @@
+---
+junos_common:
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 1800
+        fast_cli: True
+

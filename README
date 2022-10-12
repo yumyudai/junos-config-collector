@@ -1,0 +1,30 @@
+Simple config collector to collect configs used during POC.
+Author: Yudai Yamagishi <yudai@yamagishi.net>
+
+1. Update inventory file
+```
+$ vim inventory/hosts.yaml
+---
+spoke1:
+  hostname: 192.168.0.1
+  port: 22
+  platform: juniper_junos
+  username: username_for_ssh
+  password: password_for_ssh
+  groups:
+    - junos_common
+```
+
+2. Prepare runtime environment
+```
+$ sudo apt install python3.8-venv jq
+$ python3 -m venv .venv
+$ source ./.venv/bin/activate
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
+```
+
+3. Run the config collector
+```
+$ python main.py
+```

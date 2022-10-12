@@ -1,0 +1,10 @@
+---
+test1:
+  hostname: 192.168.0.1
+  port: 22
+  platform: juniper_junos
+  username: username_for_ssh
+  password: "password_for_ssh"
+  groups:
+    - junos_common
+
